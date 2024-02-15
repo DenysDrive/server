@@ -107,7 +107,7 @@ app.post('/api/auth/login', (req, res) => {
   }
 });
 app.get('/api/test', (req, res) => {
-  res.send('Hello World (automatically deployed from github)!')
+  res.send('Hello World (automatically deployed from github modified for the presentation)!')
 })
 
 app.listen(port, async () => {
