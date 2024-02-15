@@ -107,16 +107,9 @@ app.post('/api/auth/login', (req, res) => {
   }
 });
 app.get('/api/test', (req, res) => {
-  res.send('Hello World!')
+  res.send('Hello World (automatically deployed from github)!')
 })
 
 app.listen(port, async () => {
-  try {
-    console.error('Trying to fetch public IP:');
-    const response = await axios.get('http://169.254.169.254/latest/meta-data/public-ipv4', {headers: {timeout: 5000}});
-    console.log(`Server listening on port ${port} and public IP ${response.data}`);
-  } catch (error) {
-    console.error('Could not fetch public IP:', error.message);
-    console.log(`Server listening on port ${port}`);
-  }
+  console.log(`Server listening on port ${port}`);
 })
